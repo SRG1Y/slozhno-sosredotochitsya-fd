@@ -5,7 +5,8 @@
   padding: 10px;
   color: var(--text-clr);
   font-size: 18px;
-  background-image: var(--cover-image);
+  background-image: var(--cover-image, none);
+  background-color: var(--background-color);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -47,7 +48,7 @@
   font-weight: 700;
 }
 
-.h2-heading {
+.title {
   margin: 0 0 20px;
   color: var(--heading-clr);
   font-weight: 700;
@@ -71,6 +72,10 @@
   align-items: center;
 }
 
+.header, .footer {
+  min-block-size: calc(100vh - 10px);
+}
+
 .decorative-rec-icon {
   position: absolute;
   display: flex;
@@ -86,28 +91,30 @@
   content: "";
   display: block;
   border-radius: 50%;
-  box-shadow: 0 0 5px 4px var(--rec-decoration-clr);
+  /* box-shadow: 0 0 5px 4px var(--rec-decoration-clr); */
+  box-shadow: 0 0 4px 2px var(--rec-decoration-clr);
   background-color: var(--rec-decoration-clr);
-  inline-size: 7px;
-  block-size: 7px;
+  inline-size: 9px;
+  block-size: 9px;
 }
 
 .decorated-zone {
   position: relative;
-  min-block-size: 97vh;
+  /* min-block-size: 97vh; */
 }
 
 @media (min-width: 768px) {
-  .decorated-zone {
-    min-block-size: 96vh;
+  .header, .footer{
+    /* min-block-size: 96vh; */
+    min-block-size: calc(100vh - 20px);
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .decorated-zone {
     min-block-size: 94.7vh;
   }
-}
+} */
 
 .decorated-zone::before {
   content: "";
@@ -256,17 +263,17 @@
     margin: 60px 0 0;
   }
 
-  .what__heading {
+  .what__title {
     max-inline-size: 236px;
   }
 }
 
 @media (min-width: 1024px) {
-  .what__heading {
+  .what__title {
     max-inline-size: 314px;
   }
 
-  .what__list {
+  .what .articles__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--gap);
@@ -293,11 +300,11 @@
   }
 }
 
-.how__list-heading {
+.articles__list-heading {
   margin: 0 0 20px;
 }
 
-.how__list-title {
+.articles__list-title--normal {
   font-weight: 400;
 }
 
@@ -357,14 +364,14 @@
     object-position: top;
     block-size: 100%;
   }
+}
 
-  .footer {
-    display: grid;
-  }
+.footer {
+  display: grid;
+}
 
-  .footer__text {
-    justify-self: center;
-    align-self: center;
-    text-shadow: 2px 2px 0 var(--accent-clr);
-  }
+.footer__text {
+  justify-self: center;
+  align-self: center;
+  text-shadow: 2px 2px 0 var(--accent-clr);
 }
