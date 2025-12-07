@@ -91,7 +91,6 @@
   content: "";
   display: block;
   border-radius: 50%;
-  /* box-shadow: 0 0 5px 4px var(--rec-decoration-clr); */
   box-shadow: 0 0 4px 2px var(--rec-decoration-clr);
   background-color: var(--rec-decoration-clr);
   inline-size: 9px;
@@ -100,21 +99,13 @@
 
 .decorated-zone {
   position: relative;
-  /* min-block-size: 97vh; */
 }
 
 @media (min-width: 768px) {
   .header, .footer{
-    /* min-block-size: 96vh; */
     min-block-size: calc(100vh - 20px);
   }
 }
-
-/* @media (min-width: 1024px) {
-  .decorated-zone {
-    min-block-size: 94.7vh;
-  }
-} */
 
 .decorated-zone::before {
   content: "";

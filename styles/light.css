@@ -15,6 +15,7 @@
   --menu-clr: #353430;
   --rec-decoration-clr: transparent;
   --heading-clr: #353430;
+  --background-color: #FFF1F7;
 }
 
 @media (prefers-color-scheme: light) {
