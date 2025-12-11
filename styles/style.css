@@ -66,18 +66,16 @@
   left: 0;
 }
 
-.accented-link:hover {
-  text-shadow: 2px 2px 0 var(--accent-clr);
-}
-
 .accented-link:hover::after {
   transform: scaleX(1);
 }
 
 .accented-link:focus {
   outline: none;
+}
+
+.accented-link:focus-visible {
   border: 1px solid var(--text-clr);
-  text-shadow: 2px 2px 0 var(--accent-clr);
 }
 
 .paragraph-text {
@@ -118,8 +116,7 @@
   block-size: 9px;
 }
 
-.decorated-zone,
-.decorated-zone-footer {
+.decorated-zone {
   position: relative;
 }
 
@@ -131,8 +128,7 @@
   }
 }
 
-.decorated-zone::before,
-.decorated-zone-footer::before {
+.decorated-zone::before {
   content: "";
   position: absolute;
   border-top: 1px solid var(--decorative-bracket-clr);
@@ -143,8 +139,7 @@
   inset-block-start: 0;
 }
 
-.decorated-zone::after,
-.decorated-zone-footer::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   border-bottom: 1px solid var(--decorative-bracket-clr);
@@ -299,9 +294,6 @@
 }
 
 @media (min-width: 768px) {
-  .gallery {
-    margin: 60px 0 74px;
-  }
 
   .gallery__list {
     display: grid;
@@ -389,22 +381,16 @@
     margin: -1px -10px;
   }
   .footer {
-    margin: 0px -10px;
-  }
-  .footer__text {
-    margin-top: 77px;
+    margin-top: 38px;
   }
   .decorated-zone::before {
     margin: 10px -9px;
   }
-  .decorated-zone-footer::before {
-    margin: 48px 0;
-  }
   .decorated-zone::after {
-    margin: 10px -10px;
+    margin: 11px -10px;
   }
-  .decorated-zone-footer::after {
-    margin: -26px 0;
+  .footer__text {
+    margin-left: -6px;
   }
 }
 
@@ -447,26 +433,14 @@
   .articles__list-container {
     margin-top: 20px;
   }
-  .gallery {
-    margin: 0px 0px;
-  }
   .footer {
-    margin: 0px 0px;
-  }
-  .footer__text {
-    margin-top: 105px;
+    margin-top: 50px;
   }
   .decorated-zone::before {
-    margin: 20px 0;
-  }
-  .decorated-zone-footer::before {
-    margin: 73px 0;
+    margin: 20px 0px ;
   }
   .decorated-zone::after {
-    margin: 20px 0;
-  }
-  .decorated-zone-footer::after {
-    margin: -35px 0;
+    margin: 20px 0px;
   }
 }
 
@@ -510,9 +484,5 @@
   }
   .decorated-zone::after {
     margin-bottom: 20px;
-  }
-  .decorated-zone-footer::before,
-  .decorated-zone-footer::after {
-    margin: 20px 0;
   }
 }
